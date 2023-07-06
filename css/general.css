@@ -15,12 +15,16 @@ GENERAL
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    height: 600px;
+    height: 650px;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
+}
+
+.active {
+    background-color: #E8EBEB !important;
 }
 
 /* 

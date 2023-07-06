@@ -6,27 +6,160 @@
 }
 
 /* 
-MAIN 
+GENERAL AND UTILITIES 
 */
 .contacts {
     width: 40%;
-    height: 600px;
+    height: 650px;
+    border-right: 1px solid #B1B1B1;
 }
 .chat {
     width: 60%;
-    height: 600px;
+    height: 650px;
 }
 
-/* CONTACTS */
+img {
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+}
+
+.user-img {
+    width: 60px;
+    padding: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.contact-img {
+    width: 60px;
+}
+
+.contact-list {
+    padding: 10px;
+    display: flex;
+}
+
+/* ------CONTACTS -------*/
 /* 
 HEADER 
 */
 
+.header-contacts > header {
+    height: 60px;
+    background-color: #EAEAEA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.my-name, .user-info {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-contacts > header > .options{
+    padding-right: 5px;
+}
+.header-contacts > header > .options > i{
+    padding-right: 10px;
+    color: #B1B1B1;
+}
+
+.bell {
+    height: 50px;
+    background-color: #8EDAFB;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+}
+.bell > .my-bell > i{
+    font-size: 1em;
+    color: #8EDAFB;
+}
+.bell > .my-bell {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.bell > .desktop-notification {
+    margin-left: 15px;
+    width: 100%;
+}
+
+.bell > .desktop-notification > div:first-child {
+    font-size: 15px;
+}
+
+.bell > .desktop-notification > div:last-child > a {
+    font-size: 12px;
+    color: #7d7d7d;
+}
+
+.search-contact {
+    height: 40px;
+    padding: 7px 5px;
+    background-color:#F1F1F1;
+}
+.search-contact > input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+}
 
 /* 
 MAIN 
 */
+
+.contacts > main {
+    height: calc(100% - 150px);
+    overflow: auto;
+}
+
+.contact-list {
+    background-color: #FFFFFF;
+    border-top: 1px solid #B1B1B1;
+}
+
+.contacts > main > div.contact-list > .user-info {
+    margin-left: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.last-message, .clock {
+    font-size: 12px;
+    color: #7d7d7d;
+}
+
+
+
+/* 
+FOOTER 
+*/
+
+
+
+/* ---------CHAT---------- */
+/* 
+HEADER 
+*/
+
+.chat > header {
+    height: 60px;
+    background-color: #EAEAEA;
+}
+
+/* 
+MAIN 
+*/
+.chat > main {
+    height: calc(100% - 120px);
+    background-image: url("/img/mine.jpg");
+}
 
 /* 
 FOOTER 
@@ -47,32 +180,16 @@ DEBUG
     background-color: rgb(47, 178, 38);
 }
 
-.debug .header-contacts > header {
-    height: 60px;
-    background-color: beige;
-}
+.debug 
 
 .debug .chat > header {
-    height: 60px;
     background-color: rgb(135, 135, 120);
 }
 
-.debug .chat > main {
-    height: calc(100% - 120px);
-    background-color: rgb(163, 53, 47);
-}
 
 .debug .header-contacts > .notification {
     height: 90px;
     background-color: rgb(32, 86, 99);
 }
 
-.debug .bell {
-    height: 50px;
-    background-color: aqua;
-}
-
-.debug .search-contact {
-    height: 40px;
-    background-color:blueviolet;
-}
+.debug
