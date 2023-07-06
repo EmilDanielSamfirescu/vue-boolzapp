@@ -24,11 +24,12 @@ img {
     border-radius: 50%;
 }
 
-.user-img {
+.user-img, .active-user-img {
     width: 60px;
     padding: 5px;
     display: inline-block;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .contact-img {
@@ -38,6 +39,14 @@ img {
 .contact-list {
     padding: 10px;
     display: flex;
+    cursor: pointer;
+}
+
+* i, 
+.active-user-name, 
+.header-contacts > header > div:first-child,
+.active-user-info  {
+    cursor: pointer;
 }
 
 /* ------CONTACTS -------*/
@@ -66,6 +75,8 @@ HEADER
     color: #B1B1B1;
 }
 
+
+
 .bell {
     height: 50px;
     background-color: #8EDAFB;
@@ -88,6 +99,7 @@ HEADER
     width: 100%;
 }
 
+
 .bell > .desktop-notification > div:first-child {
     font-size: 15px;
 }
@@ -96,6 +108,7 @@ HEADER
     font-size: 12px;
     color: #7d7d7d;
 }
+
 
 .search-contact {
     height: 40px;
@@ -107,6 +120,7 @@ HEADER
     height: 100%;
     border: 1px solid #cfcfcf;
     border-radius: 5px;
+    padding-left: 10px;
 }
 
 /* 
@@ -137,12 +151,6 @@ MAIN
 
 
 
-/* 
-FOOTER 
-*/
-
-
-
 /* ---------CHAT---------- */
 /* 
 HEADER 
@@ -151,7 +159,32 @@ HEADER
 .chat > header {
     height: 60px;
     background-color: #EAEAEA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.chat > header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.active-user-info > div:last-child {
+    margin-left: 10px;
+}
+
+.active-user-options > i {
+    padding-right: 10px;
+    color: #B1B1B1;
+}
+
+.last-login {
+    font-size: 12px;
+    color: #7d7d7d;
+}
+
 
 /* 
 MAIN 
@@ -159,37 +192,92 @@ MAIN
 .chat > main {
     height: calc(100% - 120px);
     background-image: url("/img/mine.jpg");
+    overflow: auto;
+    padding: 20px 50px;
 }
+
+.message-chat > div:first-child{
+    padding-bottom: 5px;
+}
+
+.recived-message-left > div:not(div:last-child), 
+.sent-message-right > div:not(div:last-child) {
+    margin-bottom: 5px;
+}
+
+.recived-message {
+    background-color: white;
+    padding: 5px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.sent-message-right {
+    text-align: end;
+    margin-top: 5px;
+}
+
+.sent-message {
+    background-color: #D5F9BA;
+    padding: 5px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.clock-message {
+    font-size: 10px;
+    text-align: end;
+} 
 
 /* 
 FOOTER 
 */
 
+footer {
+    height: 60px;
+    background-color: #EAEAEA;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+}
+
+footer > .text-message {
+    width: 80%;
+    height: 100%;
+}
+
+footer > .text-message > input {
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+}
+
+.emoji > i, .microphone > i{
+    color: #7c7c7c;
+    font-size: 1.3em;
+}
+
 /* 
 DEBUG 
 */
 
-.debug .container {
+/* .debug .container {
     background-color:rgb(176, 176, 1);
-}
+} */
 
-.debug .contacts {
+/* .debug .contacts {
     background-color: rgb(18, 194, 144);
-}
-.debug .chat {
-    background-color: rgb(47, 178, 38);
-}
+} */
 
-.debug 
 
-.debug .chat > header {
+/* .debug .chat > header {
     background-color: rgb(135, 135, 120);
-}
+} */
 
-
-.debug .header-contacts > .notification {
+/* .debug .header-contacts > .notification {
     height: 90px;
     background-color: rgb(32, 86, 99);
-}
-
-.debug
+} */
