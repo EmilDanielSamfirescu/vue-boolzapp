@@ -130,6 +130,7 @@ MAIN
 .contacts > main {
     height: calc(100% - 150px);
     overflow: auto;
+    background-color: #FFFFFF;
 }
 
 .contact-list {
