@@ -1,6 +1,28 @@
+.backgrounder {
+    height: 100vh;
+    background: linear-gradient(360deg, rgba(218,219,211,1) 85%, 
+    rgba(0,150,136,1) 85%);
+    padding-top: 1.875rem;
+}
+
+/* 
+MAIN 
+*/
+.contacts {
+    width: 40%;
+    height: 600px;
+}
+.chat {
+    width: 60%;
+    height: 600px;
+}
+
+/* CONTACTS */
 /* 
 HEADER 
 */
+
+
 
 /* 
 MAIN 
@@ -13,3 +35,44 @@ FOOTER
 /* 
 DEBUG 
 */
+
+.debug .container {
+    background-color:rgb(176, 176, 1);
+}
+
+.debug .contacts {
+    background-color: rgb(18, 194, 144);
+}
+.debug .chat {
+    background-color: rgb(47, 178, 38);
+}
+
+.debug .header-contacts > header {
+    height: 60px;
+    background-color: beige;
+}
+
+.debug .chat > header {
+    height: 60px;
+    background-color: rgb(135, 135, 120);
+}
+
+.debug .chat > main {
+    height: calc(100% - 120px);
+    background-color: rgb(163, 53, 47);
+}
+
+.debug .header-contacts > .notification {
+    height: 90px;
+    background-color: rgb(32, 86, 99);
+}
+
+.debug .bell {
+    height: 50px;
+    background-color: aqua;
+}
+
+.debug .search-contact {
+    height: 40px;
+    background-color:blueviolet;
+}

@@ -12,13 +12,10 @@ RESET
 GENERAL 
 */
 
-body {
-    
-}
-
 .container {
-    max-width: 1170px;
+    max-width: 1200px;
     margin: 0 auto;
+    height: 600px;
 }
 
 .row {
