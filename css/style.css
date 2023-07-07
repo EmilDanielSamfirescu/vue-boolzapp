@@ -10,12 +10,12 @@ GENERAL AND UTILITIES
 */
 .contacts {
     width: 40%;
-    height: 650px;
+    height: 90vh;
     border-right: 1px solid #B1B1B1;
 }
 .chat {
     width: 60%;
-    height: 650px;
+    height: 90vh;
 }
 
 img {
@@ -78,7 +78,7 @@ HEADER
 
 
 .bell {
-    height: 50px;
+    height: 60px;
     background-color: #8EDAFB;
     padding-left: 15px;
     display: flex;
@@ -111,7 +111,7 @@ HEADER
 
 
 .search-contact {
-    height: 40px;
+    height: 50px;
     padding: 7px 5px;
     background-color:#F1F1F1;
 }
@@ -128,7 +128,7 @@ MAIN
 */
 
 .contacts > main {
-    height: calc(100% - 150px);
+    height: calc(100% - 170px);
     overflow: auto;
     background-color: #FFFFFF;
 }

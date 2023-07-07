@@ -2,6 +2,7 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
+            indiceX: 0,
             contacts: [
                 {
                 name: 'Michele',
