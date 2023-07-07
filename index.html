@@ -212,54 +212,14 @@
                         </header>
     
                         <main>
-                            
-                            <!-- <div class="recived-message-left message-chat">
-                                <div>
-                                    <div class="recived-message">messaggio ricevuto</div>
-                                </div>
-                            </div> -->
-    
-                            <div class="recived-message-left">
-    
-                                <div v-for="(singleMessage, i) in contacts">
-                                    <div class="recived-message ">
-                                        <div class="message-chat">
-                                            <div>
-                                                {{singleMessage[0].messages}}
-                                            </div>
-                                            <div class="clock-message">15:30</div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                </div>  
-    
+
+                            <div class="message"
+                            v-for="(singleMessage, i) in contacts[indiceX].messages"
+                            :class="(singleMessage.status == `sent`) ? `sent` : `recived`">
+                            {{singleMessage.message}}
+                                <div class="clock-message">{{singleMessage.date}}</div>
                             </div>
-                            
     
-                            <div class="sent-message-right">
-    
-                                <div>
-                                    <div class="sent-message">
-                                        <div class="message-chat">
-                                            <div>Lorem </div>
-                                            <div class="clock-message">15:30</div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                </div>
-    
-                                <div>
-                                    <div class="sent-message">
-                                        <div class="message-chat">
-                                            <div>Lorem </div>
-                                            <div class="clock-message">15:30</div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                </div>
-    
-                            </div>
-                            
                         
                         </main>
     

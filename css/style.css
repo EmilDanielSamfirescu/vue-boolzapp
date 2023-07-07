@@ -197,38 +197,35 @@ MAIN
     padding: 20px 50px;
 }
 
-.message-chat > div:first-child{
-    padding-bottom: 5px;
+.chat > main {
+    display: flex;
+    flex-direction: column;
 }
 
-.recived-message-left > div:not(div:last-child), 
-.sent-message-right > div:not(div:last-child) {
+.message {
+    padding: 10px;
+    border-radius: 8px;
     margin-bottom: 5px;
+    max-width: 60%;
+    min-width: 30%;
 }
 
-.recived-message {
+.recived {
     background-color: white;
-    padding: 5px;
-    display: inline-block;
-    border-radius: 5px;
+    align-self: flex-start;
 }
 
-.sent-message-right {
-    text-align: end;
-    margin-top: 5px;
-}
-
-.sent-message {
+.sent {
     background-color: #D5F9BA;
-    padding: 5px;
-    display: inline-block;
-    border-radius: 5px;
+    align-self: flex-end;
 }
 
 .clock-message {
     font-size: 10px;
     text-align: end;
-} 
+    padding-top: 3px;
+}
+
 
 /* 
 FOOTER 
