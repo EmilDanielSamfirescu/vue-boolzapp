@@ -199,10 +199,12 @@
                         <header>
                             <div class="active-user-info">
                                 <div class="active-user-img">
-                                    <img src="img/avatar_1.jpg" alt="image profile">
+                                    <img :src="contacts[indiceX].avatar" :alt="contacts[indiceX].name">
                                 </div>
                                 <div>
-                                    <div class="active-user-name">Michele</div>
+                                    <div class="active-user-name">
+                                        {{contacts[indiceX].name}}
+                                    </div>
                                     <div class="last-login">Ultimo accesso oggi alle 12:00</div>
                                 </div>
                             </div>
