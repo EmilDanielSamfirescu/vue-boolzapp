@@ -183,6 +183,16 @@ createApp({
                     status: 'sent'
                     });
                     this.newMessage = ``;
+
+                    setTimeout (() => {
+                        this.contacts[this.indiceX].messages.push({
+                            date: '10/01/2020 15:30:56',
+                            message: `ok`,
+                            status: 'recived'
+                            });
+                    }, 1000);
+
+                    
             }
         }
     } 
