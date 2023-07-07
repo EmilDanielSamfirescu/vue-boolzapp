@@ -76,7 +76,9 @@
                         <!-- CONTACT LIST -->
                         <main>
                             <div class="contact-list"
-                            v-for="(singleContact, i) in contacts">
+                            v-for="(singleContact, i) in contacts"
+                            @click="activedChat(i)"
+                            :class="(i == indiceX) ? `active` : ``">
                                 <div class="contact-img">
                                     <img :src="singleContact.avatar" :alt="singleContact.name">
                                 </div>
@@ -216,7 +218,7 @@
                             <div class="message"
                             v-for="(singleMessage, i) in contacts[indiceX].messages"
                             :class="(singleMessage.status == `sent`) ? `sent` : `recived`">
-                            {{singleMessage.message}}
+                                {{singleMessage.message}}
                                 <div class="clock-message">{{singleMessage.date}}</div>
                             </div>
     

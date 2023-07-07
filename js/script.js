@@ -2,7 +2,7 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
-            indiceX: 7,
+            indiceX: 0,
             contacts: [
                 {
                 name: 'Michele',
@@ -168,7 +168,11 @@ createApp({
             ]
         }
     }, methods: {
-        
+        activedChat(index) {
+            console.log(`ciaone`, index);
+            this.indiceX = index;
+
+        }
     } 
 }).mount(`#app`);
 
