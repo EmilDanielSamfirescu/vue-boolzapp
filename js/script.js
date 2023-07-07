@@ -3,6 +3,7 @@ createApp({
     data(){
         return{
             indiceX: 0,
+            newMessage: ``,
             contacts: [
                 {
                 name: 'Michele',
@@ -121,7 +122,7 @@ createApp({
                         },
                         {
                         date: '10/01/2020 15:51:00',
-                        message: 'Nessuna nuova, buona nuova',
+                        message: 'Nessuna buona nuova',
                         status: 'sent'
                         }
                     ],
@@ -169,9 +170,20 @@ createApp({
         }
     }, methods: {
         activedChat(index) {
-            console.log(`ciaone`, index);
+            // console.log(`ciaone`, index);
             this.indiceX = index;
+        },
 
+        addMyNewMessage (){
+            // console.log(`keyup funziona`);
+            if(this.newMessage.trim() != 0) {
+                this.contacts[this.indiceX].messages.push({
+                    date: '10/01/2020 15:30:55',
+                    message: this.newMessage,
+                    status: 'sent'
+                    });
+                    this.newMessage = ``;
+            }
         }
     } 
 }).mount(`#app`);
