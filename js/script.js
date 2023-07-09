@@ -4,6 +4,8 @@ createApp({
         return{
             indiceX: 0,
             newMessage: ``,
+            searchName:``,
+            show: true,
             contacts: [
                 {
                 name: 'Michele',
@@ -176,24 +178,42 @@ createApp({
 
         addMyNewMessage (){
             // console.log(`keyup funziona`);
+
+            //.trim() per nonaccettare spazi vuoti
             if(this.newMessage.trim() != 0) {
                 this.contacts[this.indiceX].messages.push({
                     date: '10/01/2020 15:30:55',
                     message: this.newMessage,
                     status: 'sent'
                     });
+                    //perchè si cancelli tutto dopo l'invio
                     this.newMessage = ``;
-
-                    setTimeout (() => {
-                        this.contacts[this.indiceX].messages.push({
-                            date: '10/01/2020 15:30:56',
-                            message: `ok`,
-                            status: 'recived'
-                            });
-                    }, 1000);
-
-                    
             }
+
+            //arrow function perchè non avendo il proprio scope, posso recuperare indiceX
+            setTimeout (() => { 
+                this.contacts[this.indiceX].messages.push({
+                    date: '10/01/2020 15:30:56',
+                    message: `ok`,
+                    status: 'recived'
+                    });
+            }, 1000);
+        },
+        searchContact () {
+
+        for(let i = 0; i < this.contacts.length; i++ ) {
+
+            console.log(this.searchName);
+            this.contacts[i].visible = false;
+            
+
+            if(this.contacts[i].name.includes(this.searchName)) {
+                this.contacts[i].visible = true;
+                console.log(this.contacts[i].visible);
+            }
+        }
+
+        
         }
     } 
 }).mount(`#app`);

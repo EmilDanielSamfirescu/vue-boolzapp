@@ -66,7 +66,10 @@
                                     </div>
                                 </div>
                                 <div class="search-contact">
-                                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                                    <input type="text" 
+                                    placeholder="Cerca o inizia una nuova chat"
+                                    v-model="searchName"
+                                    @keyup.enter="searchContact()">                                   
                                 </div>
     
                             </div>
@@ -199,6 +202,7 @@
                         <header>
                             <div class="active-user-info">
                                 <div class="active-user-img">
+                                    
                                     <img :src="contacts[indiceX].avatar" :alt="contacts[indiceX].name">
                                 </div>
                                 <div>
@@ -217,9 +221,15 @@
     
                         <main>
 
+                            <!-- ciclo in contacts[indiceX].messages perchè mi servono gli oggetti in messages
+                            Ciclando solo in contacts leggo solo l'aray messages-->
                             <div class="message"
                             v-for="(singleMessage, i) in contacts[indiceX].messages"
                             :class="(singleMessage.status == `sent`) ? `sent` : `recived`">
+                                <div class="drop-down">
+                                    <i @click="show = !show" class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <!-- <div class="delete-window" v-if="show">Delete</div> -->
                                 {{singleMessage.message}}
                                 <div class="clock-message">{{singleMessage.date}}</div>
                             </div>
