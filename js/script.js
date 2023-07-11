@@ -212,7 +212,7 @@ createApp({
                 
             }
         }
-        this.searchName = ``;
+        
 
         
         }
