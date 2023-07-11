@@ -204,9 +204,9 @@ createApp({
         for(let i = 0; i < this.contacts.length; i++ ) {
 
             this.contacts[i].visible = false;
-            console.log(this.contacts[i].visible)
 
-            if(this.contacts[i].name.includes(this.searchName)) {
+            console.log(this.contacts[i].visible)
+            if(this.contacts[i].name.toUpperCase().includes(this.searchName.toUpperCase())) {
                 this.contacts[i].visible = true;
                 console.log(this.contacts[i].visible);
                 
