@@ -5,6 +5,10 @@
     padding-top: 1.875rem;
 }
 
+.invisible {
+    display: none;
+}
+
 /* 
 GENERAL AND UTILITIES 
 */
@@ -40,6 +44,10 @@ img {
     padding: 10px;
     display: flex;
     cursor: pointer;
+}
+
+.contact-list:hover {
+    background-color: #E8EBEB !important;
 }
 
 * i, 
@@ -192,7 +200,7 @@ MAIN
 */
 .chat > main {
     height: calc(100% - 120px);
-    background-image: url("/img/mine.jpg");
+    background-image: url("../img/mine.jpg");
     overflow: auto;
     padding: 20px 50px;
 }
@@ -203,7 +211,7 @@ MAIN
 }
 
 .message {
-    padding: 10px;
+    padding: 12px;
     padding-right: 40px;
     border-radius: 8px;
     margin-bottom: 5px;

@@ -31,7 +31,7 @@
                 <div class="row">
     
                     <!-- CONTACTS SECTION -->
-                    <setion class="contacts">
+                    <section class="contacts">
     
                         <div class="header-contacts">
     
@@ -71,17 +71,18 @@
                                     v-model="searchName"
                                     @keyup.enter="searchContact()">                                   
                                 </div>
-    
+                                
                             </div>
                             <!-- BOTTOM HEADER END-->
                         </div>
-                        
+                        <!--:class="(i == indiceX) ? `active` : ``"  -->
                         <!-- CONTACT LIST -->
                         <main>
-                            <div class="contact-list"
-                            v-for="(singleContact, i) in contacts"
+                            <template v-for="(singleContact, i) in contacts">
+                                <div class="contact-list"
+                            v-if="singleContact.visible"
                             @click="activedChat(i)"
-                            :class="(i == indiceX) ? `active` : ``">
+                            :class="{'active' : i == indiceX}">
                                 <div class="contact-img">
                                     <img :src="singleContact.avatar" :alt="singleContact.name">
                                 </div>
@@ -95,6 +96,7 @@
                                     <div class="clock">12:00</div>
                                 </div>
                             </div>
+                            </template>
                             
                             <!-- NASCOSTI -->
                             <!-- <div>
@@ -193,12 +195,12 @@
     
                         </main>
                         <!-- CONTACT LIST END-->
-                    </setion>
+                    </section>
                     <!-- CONTACT SECTION END -->
     
                     
                     <!-- CHAT SECTION -->
-                    <setion class="chat">
+                    <section class="chat">
                         <header>
                             <div class="active-user-info">
                                 <div class="active-user-img">
@@ -251,7 +253,7 @@
                                 <i class="fa-solid fa-microphone"></i>
                             </div>
                         </footer>
-                    </setion>
+                    </section>
                     <!-- CHAT SECTION END -->
     
                 </div>

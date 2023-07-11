@@ -30,7 +30,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Andrea',
+                    name: 'Fabio',
                     avatar: './img/avatar_2.jpg',
                     visible: true,
                     messages: [
@@ -108,7 +108,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Carla',
+                    name: 'Claudia',
                     avatar: './img/avatar_6.jpg',
                     visible: true,
                     messages: [
@@ -203,15 +203,16 @@ createApp({
 
         for(let i = 0; i < this.contacts.length; i++ ) {
 
-            console.log(this.searchName);
             this.contacts[i].visible = false;
-            
+            console.log(this.contacts[i].visible)
 
             if(this.contacts[i].name.includes(this.searchName)) {
                 this.contacts[i].visible = true;
                 console.log(this.contacts[i].visible);
+                
             }
         }
+        this.searchName = ``;
 
         
         }
